@@ -1,18 +1,32 @@
 {
   "name": "gpt-kit",
-  "displayName": "vscode-gpt-kit",
-  "description": "VS Code extension toolkit for GPT prompt files (.gpt, .prompt, .gptx)",
-  "version": "0.0.1",
+  "displayName": "GPT Kit",
+  "publisher": "rwsci",
+  "description": "Minimal syntax highlighting for GPT-style prompt files (.gpt, .prompt, .gptx, .chat, .gptlog) with room to grow.",
+  "version": "0.1.0",
+  "license": "MIT",
+  "homepage": "https://rwsci.io",
   "repository": {
     "type": "git",
     "url": "https://github.com/rwsci/vscode-gpt-kit.git"
+  },
+  "bugs": {
+    "url": "https://rwsci.io/contact"
   },
   "engines": {
     "vscode": "^1.103.0"
   },
   "categories": [
-    "Other"
+    "Programming Languages"
   ],
+  "keywords": [
+    "gpt",
+    "prompt",
+    "chat",
+    "syntax highlighting",
+    "ai"
+  ],
+  "icon": "icon.png",
   "activationEvents": [],
   "main": "./out/extension.js",
   "contributes": {
@@ -20,7 +34,7 @@
       {
         "id": "gpt",
         "aliases": ["GPT", "GPT Prompt"],
-        "extensions": [".gpt", ".prompt", ".gptx"],
+        "extensions": [".gpt", ".prompt", ".gptx", ".chat", ".gptlog"],
         "configuration": "./language-configuration.json"
       }
     ],
@@ -34,7 +48,7 @@
     "commands": [
       {
         "command": "gpt-kit.helloWorld",
-        "title": "Hello World"
+        "title": "GPT Kit: Hello World"
       }
     ]
   },
@@ -44,17 +58,20 @@
     "watch": "tsc -watch -p ./",
     "pretest": "npm run compile && npm run lint",
     "lint": "eslint src",
-    "test": "vscode-test"
+    "test": "vscode-test",
+    "package": "vsce package",
+    "publish:vsce": "vsce publish",
+    "publish:ovsx": "ovsx publish"
   },
   "devDependencies": {
-    "@types/vscode": "^1.103.0",
     "@types/mocha": "^10.0.10",
     "@types/node": "22.x",
+    "@types/vscode": "^1.103.0",
     "@typescript-eslint/eslint-plugin": "^8.39.0",
     "@typescript-eslint/parser": "^8.39.0",
-    "eslint": "^9.32.0",
-    "typescript": "^5.9.2",
     "@vscode/test-cli": "^0.0.11",
-    "@vscode/test-electron": "^2.5.2"
+    "@vscode/test-electron": "^2.5.2",
+    "eslint": "^9.32.0",
+    "typescript": "^5.9.2"
   }
 }
