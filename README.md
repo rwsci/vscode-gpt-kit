@@ -1,5 +1,10 @@
 # GPT Kit
 
+[![VS Code Marketplace](https://img.shields.io/visual-studio-marketplace/v/rwsci.gpt-kit)](https://marketplace.visualstudio.com/items?itemName=rwsci.gpt-kit)
+[![Installs](https://img.shields.io/visual-studio-marketplace/i/rwsci.gpt-kit)](https://marketplace.visualstudio.com/items?itemName=rwsci.gpt-kit)
+[![Rating](https://img.shields.io/visual-studio-marketplace/r/rwsci.gpt-kit)](https://marketplace.visualstudio.com/items?itemName=rwsci.gpt-kit)
+
+
 **Syntax highlighting for GPT-style prompt files in VS Code.**
 Because prompts are code too.
 
