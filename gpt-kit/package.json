@@ -3,6 +3,10 @@
   "displayName": "vscode-gpt-kit",
   "description": "VS Code extension toolkit for GPT prompt files (.gpt, .prompt, .gptx)",
   "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rwsci/vscode-gpt-kit.git"
+  },
   "engines": {
     "vscode": "^1.103.0"
   },
@@ -12,6 +16,21 @@
   "activationEvents": [],
   "main": "./out/extension.js",
   "contributes": {
+    "languages": [
+      {
+        "id": "gpt",
+        "aliases": ["GPT", "GPT Prompt"],
+        "extensions": [".gpt", ".prompt", ".gptx"],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "gpt",
+        "scopeName": "source.gpt",
+        "path": "./syntaxes/gpt.tmLanguage.json"
+      }
+    ],
     "commands": [
       {
         "command": "gpt-kit.helloWorld",

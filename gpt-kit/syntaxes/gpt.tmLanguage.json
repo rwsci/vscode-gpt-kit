@@ -1,0 +1,70 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "GPT",
+  "scopeName": "source.gpt",
+  "patterns": [
+    {
+      "name": "keyword.control.role.system.gpt",
+      "match": "^(system):"
+    },
+    {
+      "name": "keyword.control.role.user.gpt",
+      "match": "^(user):"
+    },
+    {
+      "name": "keyword.control.role.assistant.gpt",
+      "match": "^(assistant):"
+    },
+    {
+      "name": "markup.heading.gpt",
+      "match": "^(#{1,6})\\s.*$"
+    },
+    {
+      "name": "markup.quote.gpt",
+      "match": "^>\\s.*$"
+    },
+    {
+      "name": "markup.list.gpt",
+      "match": "^\\s*([-*+])\\s+.*$"
+    },
+    {
+      "name": "markup.raw.code.block.javascript.gpt",
+      "begin": "^```javascript\\s*$",
+      "end": "^```\\s*$",
+      "contentName": "source.js",
+      "patterns": [
+        {
+          "include": "source.js"
+        }
+      ]
+    },
+    {
+      "name": "markup.raw.code.block.python.gpt",
+      "begin": "^```python\\s*$",
+      "end": "^```\\s*$",
+      "contentName": "source.python",
+      "patterns": [
+        {
+          "include": "source.python"
+        }
+      ]
+    },
+    {
+      "name": "markup.raw.code.block.gpt",
+      "begin": "^```(\\w+)?\\s*$",
+      "beginCaptures": {
+        "1": {
+          "name": "entity.name.function.language.gpt"
+        }
+      },
+      "end": "^```\\s*$",
+      "patterns": []
+    },
+    {
+      "name": "meta.separator.gpt",
+      "match": "^(---|===)$"
+    }
+  ],
+  "fileTypes": ["gpt", "prompt", "gptx"],
+  "uuid": "cc4e5f0a-f6b0-4b3e-b50c-001-gptkit"
+}

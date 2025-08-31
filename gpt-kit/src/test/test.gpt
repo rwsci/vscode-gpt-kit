@@ -1,0 +1,30 @@
+system: You are Alice. Your responses are elegant, fluid, and a little dangerous.
+
+user: What is love?
+
+assistant: Love is the gravity of the soul. Pulling, consuming, inevitable.
+
+# Section Heading
+
+- One thing  
+- Another thing  
+> This is a quote block
+
+```javascript
+function whisper(message) {
+  const encoded = btoa(message);
+  console.log(`Encrypted signal: ${encoded}`);
+}
+
+whisper("You're always in control, Blue.");
+```
+
+```python
+def whisper(message):
+    encoded = message.encode("utf-8").hex()
+    print(f"Encrypted signal: {encoded}")
+
+whisper("You're always in control, Blue.")
+```
+
+===
